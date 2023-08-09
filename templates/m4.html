@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  2조 조호진 입니다. -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>개인 자기소개</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <style type="text/css">
+        /* 하이퍼링크 색과 밑줄 없애기 */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        * {
+            font-family: "Noto Serif KR", serif;
+            /* justify-content: space-between; */
+            /* border: 1px solid black; */
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .profile {
+            width: 1000px;
+            object-fit: cover;
+            background-color: white;
+            margin-bottom: 0;
+        }
+
+        .pic1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MDdfNDgg%2FMDAxNjg4NzE0NzYzMzA2.NLagOJnKdazloBxibVvrP1uF50Z1bm2Dzblabfm_ZQcg.jSNDEPY8Wv_vxfLSzAtZn9uKX_7aodA5Pnv_W4z7ueog.PNG.qweewq1001%2F3.png&type=a340");
+            background-size: cover;
+
+            margin: 20px 20px 20px 20px;
+            text-align: center;
+
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .row1 {
+            float: left;
+            width: 700px;
+            /* height: 100px; */
+
+            margin: 20px auto 20px 20px;
+
+            /* border: 1px solid black; */
+            border-radius: 10px;
+        }
+
+        .Jo_name {
+            padding-left: 5px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 30px;
+            font-size: large;
+        }
+
+        .Jo_team {
+            padding-left: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 30px;
+            font-size: large;
+        }
+
+        .Jo_mbti {
+            padding-left: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 30px;
+            font-size: large;
+        }
+
+        .row2 {
+            margin-bottom: 30px;
+            float: left;
+        }
+
+        .Jo_url {
+            width: 565px;
+            padding-left: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 30px;
+            font-size: large;
+        }
+
+        .row3 {
+            margin-bottom: 30px;
+            float: left;
+        }
+
+        .Jo_tmi {
+            width: 565px;
+            padding-left: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 30px;
+            font-size: large;
+        }
+
+        .mypic {
+            width: 100%;
+            height: 200px;
+
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MTlfOSAg%2FMDAxNjg3MTAxMDEyMzkz.DmS5Y7_dd4Tj5LtEQOyxzteWF7ndOxoIUdhGxQtcnrYg.vTmHsNJcdQD-bS_xrFPV7FA7cmvSIDSgDG1D64e3m4Ug.PNG.salgudoll%2Fp1.png&type=a340");
+            background-position: center 40%;
+            background-size: cover;
+            border-radius: 10px;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mypost {
+            width: 100%;
+            height: 700px;
+            margin: 0px auto 0px auto;
+
+            box-shadow: 0px 0px 1px 0px black;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: auto;
+        }
+
+        .mypost>button {
+            margin-top: 10px;
+        }
+
+        .mycards {
+            width: 100%;
+            margin: auto;
+        }
+
+        .mycards>.card {
+            margin-top: 10px;
+            /* margin-bottom: 10px; */
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            show_comment();
+        });
+
+        function save_comment() {
+            // 데이터 가져오기 $에는 id값
+            let visitor_name4 = $('#nickname4').val()
+            let visitor_comment4 = $('#comment4').val()
+            let star = $('#star').val()
+
+
+            let formData = new FormData();
+            formData.append("visitor_name4_give", visitor_name4)
+            formData.append("visitor_comment4_give", visitor_comment4);
+            formData.append("star_give", star)
+
+            fetch('/guestbook_m4', { method: "POST", body: formData, }).then((res) => res.json()).then((data) => {
+                alert(data["msg"]);
+                window.location.reload()
+            });
+        }
+        function show_comment() {
+            fetch('/guestbook_m4').then((res) => res.json()).then((data) => {
+                let rows = data['result']
+                $('#comment-list').empty()
+                // console.log(rows)
+                rows.forEach((a) => {
+                    let visitor_name4 = a['visitor_name4']
+                    let visitor_comment4 = a['visitor_comment4']
+                    let star = a['star']
+
+                    let temp_html = `<div class="card">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p>${star}${visitor_comment4}</p>
+                                            
+                                            <footer class="blockquote-footer">${visitor_name4}</footer>
+                                            
+                                        </blockquote>
+                                    </div>
+                                </div>`
+                    $('#comment-list').append(temp_html)
+
+                    console.log(visitor_name4, visitor_comment4)
+                })
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div style="background-color: whitesmoke;">
+        <div class="mypic" style="width: 1000px;">
+            <h1>조호진의 프로필</h1>
+
+        </div>
+    </div>
+    <div style="background-color: whitesmoke;">
+        <!-- https://www.delftstack.com/ko/howto/html/text-next-to-image-html/ 옆으로 사진 밀어넣기 -->
+        <div class="profile">
+            <div class="pic1">
+                <!--사진넣을려고 만든 div  -->
+            </div>
+            <div class="row1">
+                <!-- /* https://ojji.wayful.com/2013/12/HTML-set-Two-Parallel-DIVs-columns.html */ -->
+                <div class="col1" style="float: left; width: 25%; margin-right:20px;">
+                    <P class="Jo_name">조호진</P>
+                    <!-- <input type="text" class="form-control" placeholder="이름" aria-label="First name"> -->
+                </div>
+                <div class="col" style="float: left; width: 25%; margin-right:20px;">
+                    <P class="Jo_team">팀원</P>
+                    <!-- <input type="text" class="form-control" placeholder="팀원" aria-label="Last name"> -->
+                </div>
+                <div class="col" style="float: left; width: 25%; margin-right:20px; margin-bottom: 20px;">
+                    <P class="Jo_mbti">ISFP</P>
+                    <!-- <input type="text" class="form-control" placeholder="mbti" aria-label="Last name"> -->
+                </div>
+                <div class="row2">
+                    <P class="Jo_url"><a href="https://bm4706.tistory.com/">https://bm4706.tistory.com/</a></P>
+                    <!-- <input type="text" class="form-control" id="inputAddress" placeholder="블로그 주소"
+                    style="width: 540px; height: 40px;"> -->
+                </div>
+                <div class="row3">
+                    <P class="Jo_tmi">매우매우 집돌이입니다. 해외축구와 RPG게임을 좋아합니다.</P>
+                    <!-- <input type="text" class="form-control" id="inputAddress" placeholder="짧은 설명"
+                    style="width: 540px;height: 40px;"> -->
+                </div>
+
+            </div>
+            <div class="mypost">
+                <div class="form-floating mb-3" style="width: 150px; float: left; margin-right: 10px;">
+                    <input type="text" class="form-control" id="nickname4" placeholder="url" />
+                    <label for="floatingInput">닉네임</label>
+                </div>
+                <div class="input-group mb-3" style="width: 150px;float: left; height: 60px;">
+                    <label class="input-group-text" for="inputGroupSelect01">아바타</label>
+                    <select class="form-select" id="star">
+                        <!-- <option selected>선택</option> -->
+                        <option value="😃">😃</option>
+                        <option value="😁">😁</option>
+                        <option value="😆">😆</option>
+                        <option value="🤣">🤣</option>
+                        <option value="😂">😂</option>
+                    </select>
+                </div>
+                <div class="form-floating" style=" width: 400px; float: left; margin-left: 10px;">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="comment4"></textarea>
+                    <label for="floatingTextarea2">응원댓글</label>
+                </div>
+                <button onclick="save_comment()" type="button" class="btn btn-dark"
+                    style="float: right; margin-left: 10px; margin-right: 10px; width: 150px;">
+                    댓글 남기기
+                </button>
+
+                <div class="mycards" id="comment-list" style="float: left;">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>새로운 앨범 너무 멋져요!</p>
+                                <footer class="blockquote-footer">호빵맨</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>새로운 앨범 너무 멋져요!</p>
+                                <footer class="blockquote-footer">호빵맨</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>새로운 앨범 너무 멋져요!</p>
+                                <footer class="blockquote-footer">호빵맨</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div style="background-color: whitesmoke;">
+        <footer style="width: 1000px; text-align: right; padding-top: 10px;">
+            팀 갈매기살 <a href="http://127.0.0.1:5500/templates/index.html">메인페이지</a>
+            <br><a href="http://localhost:5000/m1">팀장 윤한기님</a>,
+            <a href="#">팀원 공혜진님</a>,
+            <a href="#">팀원 장현웅님</a>
+        </footer>
+    </div>
+</body>
+
+</html>
