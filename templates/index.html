@@ -107,12 +107,27 @@
             width: 700px;
             height: 250px;
 
-            margin: 20px auto 20px auto;
+            margin: 55px auto 0px auto;
+
+            border: 0px solid black;
+            border-radius: 10px;
+
+
+        }
+        .video_title {
+            width: 180px;
+            height: 30px;
+
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 0px;
 
             border: 1px solid black;
             border-radius: 10px;
+            background-color: aquamarine;
+            font-size: 18px;
+            text-align: center;
         }
-
 
         .team_goal_title {
             width: 120px;
@@ -367,7 +382,7 @@
             <div style="font-size: 20px;">Team 갈매기살 </div>
             <div>페이지에 오신 것을 환영합니다</div>
             <div class="another_team">다른 조 소개 페이지 탐방가기</div>
-            <div class="btn_table">
+            <div class="btn_table" style="border-radius: 10px;">
                 <button>버튼 버튼</button>
                 <button>버튼 버튼</button>
                 <button>버튼 버튼</button>
@@ -380,7 +395,12 @@
 
 
         <div class="wrapper_right">
-            <div class="video_container">홈페이지 구동 영상</div>
+            <div class="goal"><div class="video_title" >홈페이지 구동 영상</div></div>
+            <div class="video_container">
+                <div style="margin: 0px 0% 0px 15%;">
+                    <iframe width="500" height="220" src="https://www.youtube.com/embed/obdR0NROgpw" title="갈매기살 #연탄시대 #영등포맛집 #돼지고기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
             <div class="goal"><div class="team_goal_title" >Team 목표</div></div>
             <div class="team_goal">세상을 씹어먹는 개발자가 되자</div>
             <div class="goal"><div class="team_goal_title" >팀원 소개</div></div>
